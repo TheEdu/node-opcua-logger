@@ -96,7 +96,7 @@ WritePump.prototype.AddPointsToBuffer = function(points) {
 			let entry = {
 				s: p.measurement.name, 
 				v: {
-					value: p.value,
+					[p.measurement.field]: p.value,
 					time: p.timestamp
 				}, 
 				t: p.measurement.tags

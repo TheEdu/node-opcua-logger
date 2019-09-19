@@ -1,11 +1,11 @@
 [input]
-url             = "opc.tcp://opcua.demo-this.com:51210/UA/SampleServer"
+url             = "opc.tcp://PENTIUM-I5:48020"
 failoverTimeout = 5000 # time to wait before reconnection in case of failure
 
 [output]
-name             = "influx_1"
+name             = "influx_test"
 type             = "influxdb"
-host             = "128.199.39.148"
+host             = "192.168.56.202"
 port             = 8086
 protocol         = "http"
 username         = ""
@@ -18,22 +18,25 @@ writeMaxPoints   = 1000
 
 # A polled node:
 [[measurements]]
-name               = "Int32polled"
+name               = "Robot_1"
 dataType           = "number"
+field              = "ValueEdu"
 tags               = { tag1 = "test", tag2 = "AB43" }
-nodeId             = "ns=37;s=10849"
+nodeId             = "ns=4;s=Demo.Dynamic.Scalar.Int16"
 collectionType     = "polled"
 pollRate           = 60     # samples / minute.
 deadbandAbsolute   = 0      # Absolute max difference for a value not to be collected
 deadbandRelative   = 0.0    # Relative max difference for a value not to be collected
 
-# A monitored node
+# A monitored node1
 [[measurements]]
-name               = "Int32monitored"
+name               = "PabloTest"
 dataType           = "number"
+field              = "value"
 tags               = { tag1 = "test", tag2 = "AB43" }
-nodeId             = "ns=2;i=10849"
+nodeId             = "ns=4;s=Demo.Dynamic.Scalar.Int32"
 collectionType     = "monitored"
 monitorResolution  = 1000    # ms
 deadbandAbsolute   = 0 		# Absolute max difference for a value not to be collected
 deadbandRelative   = 0    	# Relative max difference for a value not to be collected
+
