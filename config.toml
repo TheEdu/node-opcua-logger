@@ -19,8 +19,8 @@ writeMaxPoints   = 1000
 # A polled node:
 [[measurements]]
 name               = "Robot_1"
-dataType           = "number"
-field              = "ValueEdu"
+dataType           = "GENERIC"
+field              = "Demo_History_DoubleWithHistory_lallalal_largo"
 tags               = { tag1 = "test", tag2 = "AB43" }
 nodeId             = "ns=4;s=Demo.Dynamic.Scalar.Int16"
 collectionType     = "polled"

@@ -397,7 +397,7 @@ function PointIsValid(p) {
 
 function PointMatchesType(p) {
     // check if the value is a type that we can handle (number or a bool).
-    let match = (typeof p.value === p.measurement.dataType)
+    let match = ((typeof p.value === p.measurement.dataType) || p.measurement.dataType == "GENERIC")
     if (!match){
         console.log(p.measurement, "Types don't match: ", typeof p.value, p.measurement.dataType)
     }
