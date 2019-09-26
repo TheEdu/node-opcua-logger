@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "root",
+    "password": "1",
+    "database": "device_sense_dev",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "production_password",
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "development_sqlite": {
+    "dialect": "sqlite",
+    "storage": "./device_sense_dev.db"
+  }
+}
