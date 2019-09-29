@@ -123,7 +123,8 @@ ReadPump.prototype.StartMonitoring = function(callback) {
                 if (PointIsValid(p) && PointMatchesType(p)) {
                     self.writepump.AddPointsToBuffer([p]);
                 } else {
-                    console.log("Invalid point returned from subscription.", PointIsValid(p), PointMatchesType(p));
+                    console.log("Invalid point -->", p.measurement.nodeId.value);
+                    // console.log("          val -->", p.value, "\n");
                 }
             });
 
