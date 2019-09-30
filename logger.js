@@ -85,7 +85,7 @@ const uuid = argv['s']
 
 if (uuid) {
 	console.log("\nSuscription UUID: ", uuid)
-	main(123)
+	main(uuid)
 } else {
 	console.log('\nEl argumento "s" (uuid de la suscripcion) es requerido.\n\tEj --> nodejs logger.js -s 123 \n')
 }
