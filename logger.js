@@ -1,10 +1,12 @@
+#!/usr/bin nodejs
+
 "use strict"
 
 var argv = require('minimist')(process.argv.slice(2));
 let async = require("async");
 let readpump = require("./readpump.js");
 let writepump = require("./writepump.js");
-const db = require('./sequelize');
+const db = require('./sequelize_new');
 
 const main = async (uuid) =>  {
 

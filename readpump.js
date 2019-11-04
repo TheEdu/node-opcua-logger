@@ -114,7 +114,7 @@ ReadPump.prototype.StartMonitoring = function(callback) {
                         discardOldest: true,
                         queueSize: 1000
                     },
-                    opcua.read_service.TimestampsToReturn.Both,
+                    opcua.read_service.TimestampsToReturn.Server,
                     function(err) {
                         if (err) callback(err);
                     });
